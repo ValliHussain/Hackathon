@@ -1,0 +1,12 @@
+.container{
+    background: linear-gradient(rgb(173, 246, 252),white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+header{
+    background-color: black;
+}

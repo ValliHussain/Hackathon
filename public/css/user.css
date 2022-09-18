@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 50vh;
+    color: white;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: -6rem;
+    box-shadow: 5px 5px 15px -5px rgba(255, 255, 255, 0.8);
+}
+tr{
+    text-align: center;
+}
+.container .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+    flex-direction: column;
+}
+.calculator{
+    margin: 10px 0;
+}
+label{
+    color: white;
+}
+th{
+    width: 200px;
+}

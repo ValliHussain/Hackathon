@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+html {
+    height: 100vh;
+    font-family: 'helvetica neue';
+  }
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 5px 5px 15px -5px rgba(255, 255, 255, 0.8);
+    
+}
+.nav .logo{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 20px;
+    -webkit-box-reflect: below -40px linear-gradient(transparent, rgba(225,225,225,.5));
+
+}
+.nav .logo:hover{
+    cursor: pointer;
+}
+.nav .head .navbar{
+    display: flex;
+    justify-content: space-around;
+}
+.nav .head .navbar li{
+    list-style: none;
+}
+.nav .head .navbar li a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+#nav-icons{
+    margin-right: 50px;
+    font-size: 20px;
+}
+#nav-icons a:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 100px;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .matter{
+    padding: 50px;
+    text-align: center;
+    font-family: 'Akaya Telivigala',cursive;
+    font-size: 30px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+h1{
+    color: white;
+}
+span{
+    color: white;
+}
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 60px;
+}
+.waviy span {
+    font-family: 'Alfa Slab One', cursive;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    
+  }
+#Text{
+overflow:hidden;
+font-size: 28px;
+}
+#Text div {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  
+ #Text div:first-of-type {    
+    animation: showup 7s infinite;
+  }
+  
+#Text  div:last-of-type {
+    width:0px;
+    animation: reveal 7s infinite;
+  }
+  
+ #Text div:last-of-type span {
+    margin-left:-355px;
+    animation: slidein 7s infinite;
+  }
+  
+  @keyframes showup {
+      0% {opacity:0;}
+      20% {opacity:1;}
+      80% {opacity:1;}
+      100% {opacity:0;}
+  }
+  
+  @keyframes slidein {
+      0% { margin-left:-800px; }
+      20% { margin-left:-800px; }
+      35% { margin-left:0px; }
+      100% { margin-left:0px; }
+  }
+  
+  @keyframes reveal {
+      0% {opacity:0;width:0px;}
+      20% {opacity:1;width:0px;}
+      30% {width:355px;}
+      80% {opacity:1;}
+      100% {opacity:0;width:355px;}
+  }
+
+
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+
+  @media (max-width: 600px) {
+    .main{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+html {
+    font-family: 'helvetica neue';
+  }
+  .main{
+    display: flex;
+    justify-content: space-between;
+  }
+  .box {
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 5px;
+    height: 500px;
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 100px;
+    font-family: 'Akaya Telivigala',cursive;
+  }
+  .details{
+
+    /* background: radial-gradient(#E4E9FD 50%,#cdb6f6 ); */
+    
+    width: 400px;
+    opacity: 1;
+    background: rgba(127, 127, 127, 0.2);
+    box-shadow: 5px 5px 15px -5px rgba(255, 255, 255, 0.5);
+    
+    
+  }
+  .details input{
+    display: flex;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 30px;
+    font-size: 15px;
+    border: .5px solid #A683E3;
+  }
+  .details button{
+    width: 250px;
+    height: 30px;
+    background-color: #A683E3;
+    color: white;
+    font-size: 15px;
+  }
+  .details p{
+    font-size: 15px;
+    color: white;
+    margin: 15px 0;
+  }
+  .details p a{
+    text-decoration: none;
+    color: #d8c7f7;
+  }
+  .details h1{
+    color:white;
+    font-size: 50px;
+    /* background-color: #A683E3; */
+    
+  }
+  .details button:hover{
+    transform: translateY(-3px);
+  }
+  .details:hover{
+    transition: all .1s ease-in;
+    transform: translate(3px);
+    
+
+  }
+  .slogan{
+    font-size: 25px;
+    padding: 13px;
+    display: inline-block;
+    color: white;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+    box-shadow: 5px 5px 15px -5px rgba(255, 255, 255, 0.5);
+    
+  }
+
+  @media (max-width: 600px) {
+    .main{
+      display: flex;
+      flex-direction: column;
+    }
+  }
