@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphs</title>
+    <link rel="stylesheet" href="css/start.css">
+    <style>
+      header{
+        background-color: black;
+      }
+      body{
+        background: linear-gradient(yellow,white);
+        background-repeat: no-repeat;
+      }
+        .charts{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+        #myChart1{
+          margin: 20px 0;
+        }
+        #myChart2{
+          margin: 20px 0;
+          color: white;
+        }
+        #myChart3{
+          margin: 20px 0;
+        }
+        .nav{
+            box-shadow: 5px 5px 5px -5px rgba(30, 29, 29, 0.8);
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <span>WATTO-Meter</span>
+            </div>
+            <div class="head">
+              <ul class="navbar">
+                <li id="nav-icons"><a href="/main">Home</a></li>
+                <li id="nav-icons"><a href="/about">About</a></li>
+                <li id="nav-icons"><a href="/graphs">Graphs</a></li>
+                <li id="nav-icons"><a href="/userinput">Calculate</a></li>
+                <li id="nav-icons"><a href="/prediction">Prediction Table</a></li>
+                <li id="nav-icons"><a href="/"><ion-icon name="power-outline"></ion-icon></a></li>
+            </ul>
+            </div>
+        </div>
+    </header>
+    <div class="charts">
+      <h3>Daily-Usage</h3>
+        <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+        <h3>Monthly-Usage</h3>
+        <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+        <h3>Daily-limit vs Your-Usage</h3>
+        <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+      </div>
+     
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script>
+    var xValues = ['Day1','Day2','Day3','Day4','Day5','Day6','Day7','Day7','Day8','Day9','Day10'];
+    var yValues = [7,8,8,9,9,9,10,11,14,14];
+    var y1Values = [6,6,6,6,6,6,6,6,6,6];
+    var y2values=[4,7,5,9,6,3,6,8,9,10]
+    
+    new Chart("myChart1", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [{
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "green",
+          borderColor: "green",
+          data: y2values,
+
+        }]
+      },
+      options: {
+        legend: {display: false},
+        scales: {
+          yAxes: [{ticks: {min: 1, max:16}}],
+        }
+      }
+    });
+    new Chart("myChart2", {
+      type: "line",
+      data: {
+        labels: xValues,
+        datasets: [{
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "rgba(0,0,255,1.0)",
+          borderColor: "rgba(0,0,255,0.1)",
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        scales: {
+          yAxes: [{ticks: {min: 6, max:16}}],
+        }
+      }
+    });
+
+new Chart("myChart3", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      data: y2values,
+      borderColor: "red",
+      fill: false
+    },{
+      data: y1Values,
+      borderColor: "green",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+    </script>
+</html>

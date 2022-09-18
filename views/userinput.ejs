@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/start.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body style="background-image: url('images/im2.jpg'); background-size: cover;">
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <span>WATTO-Meter</span>
+            </div>
+            <div class="head">
+                <ul class="navbar">
+                    <li id="nav-icons"><a href="/main">Home</a></li>
+                    <li id="nav-icons"><a href="/about">About</a></li>
+                    <li id="nav-icons"><a href="/graphs">Graphs</a></li>
+                    <li id="nav-icons"><a href="/userinput">Calculate</a></li>
+                    <li id="nav-icons"><a href="/prediction">Prediction Table</a></li>
+                    <li id="nav-icons"><a href="/"><ion-icon name="power-outline"></ion-icon></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="table">
+            <table>
+                <caption>Slab rates</caption>
+                <thead>
+                    <tr>
+                        <th>Units</th>
+                        <th colspan="2">Cost(in rupees)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>50</td>
+                        <td>72.5</td>
+                    </tr>
+                    <tr>
+                        <td>100</td>
+                        <td>260</td>
+                    </tr>
+                    <tr>
+                        <td>150</td>
+                        <td>440</td>
+                    </tr>
+                    <tr>
+                        <td>200</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>250</td>
+                        <td>1195</td>
+                    </tr>
+                    <tr>
+                        <td>300</td>
+                        <td>1550</td>
+                    </tr>
+                    <tr>
+                        <td>400</td>
+                        <td>2345</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>3195</td>
+                    </tr>
+                    <tr>
+                        <td>600</td>
+                        <td>4190</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="user">
+            <div class="limit">
+                <form action="/limit" method="post">
+                    <input type="number" name="number" min="0">
+                    <button type="submit">Set Limit</button>
+                </form>
+            </div>
+            <div class="calculator">
+                <form action="/calculate" method="post">
+                    <input type="number" name="Number" placeholder="Enter the Units" required>
+                    <button type="submit">Calculate</button>
+                    <label name="answer"><%= answer %></label>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>
